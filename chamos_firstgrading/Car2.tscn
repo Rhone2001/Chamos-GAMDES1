@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqtmcswxh4me"]
+
+[ext_resource type="Script" uid="uid://u83pk086qxby" path="res://car_2.gd" id="1_2bgpl"]
+[ext_resource type="Texture2D" uid="uid://bcvqxfhv8xsyr" path="res://assets/cars/Mark III_Checks.png" id="1_b52sl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b52sl"]
+radius = 26.0
+height = 108.0
+
+[node name="Car2" type="CharacterBody2D"]
+position = Vector2(109, 51)
+script = ExtResource("1_2bgpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 4)
+shape = SubResource("CapsuleShape2D_b52sl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, -3)
+scale = Vector2(2.125, 2.17188)
+texture = ExtResource("1_b52sl")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxiwdef8v8btw"]
+
+[ext_resource type="Texture2D" uid="uid://c0jxf4kp1gkos" path="res://assets/cars/MarkII_Cobalt.png" id="1_1k6jk"]
+[ext_resource type="Script" uid="uid://bsy8m76ek7r1i" path="res://car.gd" id="1_y2uan"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2uan"]
+height = 54.0
+
+[node name="Node2D" type="CharacterBody2D"]
+position = Vector2(101, 74)
+script = ExtResource("1_y2uan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(34.5, -9.5)
+scale = Vector2(2.14063, 2.01562)
+shape = SubResource("CapsuleShape2D_y2uan")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(34.5, -9.5)
+scale = Vector2(2.14063, 2.01562)
+texture = ExtResource("1_1k6jk")
